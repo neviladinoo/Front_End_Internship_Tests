@@ -6,19 +6,20 @@ let currentIndex = 0;
 
 const updateCarousel = () => {
     const itemWidth = track.querySelector('.carousel-item').clientWidth;
-    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`; // Moves carousel
 
+    // Update active dot
     dots.forEach(dot => dot.classList.remove('active'));
     dots[currentIndex].classList.add('active');
 };
 
 nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % track.children.length;
+    currentIndex = (currentIndex + 1) % track.children.length; // Move forward
     updateCarousel();
 });
 
 prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + track.children.length) % track.children.length;
+    currentIndex = (currentIndex - 1 + track.children.length) % track.children.length; // Move backward
     updateCarousel();
 });
 
@@ -29,8 +30,10 @@ dots.forEach((dot, index) => {
     });
 });
 
+// Update carousel when the window is resized
 window.addEventListener('resize', updateCarousel);
 
+// Initialize the carousel when the page loads
+window.addEventListener('load', updateCarousel);
 
-updateCarousel();
 

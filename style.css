@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@ body {
     line-height: 1.6;
 }
 
-
+/* Navbar */
 .navbar {
     background-color: #333;
     color: white;
@@ -38,7 +37,7 @@ body {
     font-size: 1.1em;
 }
 
-
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 50px 0;
@@ -54,7 +53,7 @@ body {
     font-size: 1.2em;
 }
 
-
+/* Image Grid */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -68,11 +67,12 @@ body {
     border-radius: 8px;
 }
 
-
+/* Carousel */
 .carousel {
     position: relative;
     overflow: hidden;
     margin: 30px 0;
+    max-width: 100%; /* Full width */
 }
 
 .carousel-container {
@@ -81,14 +81,16 @@ body {
 }
 
 .carousel-item {
-    min-width: 100%;
+    min-width: 100%; /* 1 image per slide */
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
+    border-radius: 8px; /* Rounded corners for images */
 }
 
+/* Arrow Styling */
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -99,6 +101,8 @@ body {
     border: none;
     cursor: pointer;
     font-size: 2em;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
 .carousel-arrow.left {
@@ -109,6 +113,11 @@ body {
     right: 10px;
 }
 
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken when hovering */
+}
+
+/* Dots Navigation */
 .carousel-dots {
     text-align: center;
     margin-top: 10px;
@@ -122,13 +131,18 @@ body {
     height: 10px;
     margin: 0 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .carousel-dot.active {
     background-color: #fff;
 }
 
+.carousel-dot:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
+/* Flex Content */
 .flex-content {
     display: flex;
     justify-content: space-between;
@@ -151,11 +165,66 @@ body {
     font-size: 1.1em;
 }
 
-
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
 }
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 768px) {
+    .carousel-container {
+        display: flex;
+    }
+
+    .carousel-item {
+        min-width: 50%; /* 2 items per slide for tablets */
+    }
+
+    .carousel-arrow {
+        font-size: 1.5em;
+        padding: 8px;
+    }
+
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .flex-item {
+        width: 45%; /* Adjust flex items for better use of space */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        display: flex;
+    }
+
+    .carousel-item {
+        min-width: 100%; /* 1 item per slide for mobile */
+    }
+
+    .carousel-arrow {
+        font-size: 1.2em;
+        padding: 6px;
+    }
+
+    .carousel-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .flex-item {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+
+
+
+
+
 
