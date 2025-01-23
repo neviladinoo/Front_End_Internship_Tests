@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
+
 .navbar {
     background-color: #333;
     color: white;
@@ -37,7 +37,7 @@ body {
     font-size: 1.1em;
 }
 
-/* Hero Section */
+
 .hero {
     text-align: center;
     padding: 50px 0;
@@ -53,7 +53,7 @@ body {
     font-size: 1.2em;
 }
 
-/* Image Grid */
+
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -67,12 +67,12 @@ body {
     border-radius: 8px;
 }
 
-/* Carousel */
+
 .carousel {
     position: relative;
     overflow: hidden;
     margin: 30px 0;
-    max-width: 100%; /* Full width */
+    max-width: 100%; 
 }
 
 .carousel-container {
@@ -81,16 +81,16 @@ body {
 }
 
 .carousel-item {
-    min-width: 100%; /* 1 image per slide */
+    min-width: 100%;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Rounded corners for images */
+    border-radius: 8px; 
 }
 
-/* Arrow Styling */
+
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -117,7 +117,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8); /* Darken when hovering */
 }
 
-/* Dots Navigation */
+
 .carousel-dots {
     text-align: center;
     margin-top: 10px;
@@ -142,7 +142,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Flex Content */
+
 .flex-content {
     display: flex;
     justify-content: space-between;
@@ -165,7 +165,7 @@ body {
     font-size: 1.1em;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 10px;
@@ -173,14 +173,14 @@ footer {
     color: white;
 }
 
-/* Mobile and Tablet Responsiveness */
+
 @media (max-width: 768px) {
     .carousel-container {
         display: flex;
     }
 
     .carousel-item {
-        min-width: 50%; /* 2 items per slide for tablets */
+        min-width: 50%; 
     }
 
     .carousel-arrow {
@@ -194,7 +194,7 @@ footer {
     }
 
     .flex-item {
-        width: 45%; /* Adjust flex items for better use of space */
+        width: 45%; 
     }
 }
 
@@ -204,7 +204,7 @@ footer {
     }
 
     .carousel-item {
-        min-width: 100%; /* 1 item per slide for mobile */
+        min-width: 100%; 
     }
 
     .carousel-arrow {
@@ -218,7 +218,7 @@ footer {
     }
 
     .flex-item {
-        width: 100%; /* Full width for mobile */
+        width: 100%; 
     }
 }
 
